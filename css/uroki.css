@@ -1,0 +1,206 @@
+		.nazadName {
+  display: block;
+}
+  
+
+
+
+.hinder {
+			font-family: Arial;
+      font-size: 20px;
+			width:108px;
+      height: 30px;
+			color: gray;
+			text-shadow: 1px 1px 1px lightgray;
+			border: 2px solid rgb(121, 120, 120);
+			text-align: center;
+			background-color: #f9f9f9;
+      margin-top: 40px;
+	  position:fixed;
+	  padding-top: 9px;
+	  border-radius: 10px;
+}
+
+
+.nazad {
+			border: 2px solid rgb(121, 120, 120);
+			width: 100px;
+			text-align: center;
+			
+			padding: 5px 3px;
+			box-shadow: 2px 2px 2px gray;
+			border-radius: 9%;
+			background-color: #f9f9f9;
+			position:fixed;
+
+      transition: 0.6s ease-in;
+		}
+
+
+
+
+		.nazad:hover {
+			background-color: gray;
+			border: 1px solid black;
+			transform: scale(1.2);
+			border: 1px solid black;
+		}
+		a {
+			text-decoration: none;
+			color: rgb(88, 88, 88);
+			transition: 0.6s;
+			font-family: Arial;
+			}
+		a:hover {
+			color: white;
+		}
+		
+		ul {
+			font-family: Arial;
+			font-style: bold;
+			list-style-type: none;
+			width: 30%;
+			margin-top: 5%;
+			margin-left: 12%;
+			column-count: 2;
+			column-gap: 145%;
+
+		}
+
+
+		ul.urfin {
+			font-family: Arial;
+			font-style: bold;
+			list-style-type: none;
+			margin: 50px 25%;
+			column-count: 2;
+			column-gap: 100%;
+
+
+		}
+
+
+
+		.data {
+			font-size: 20px;
+			font-style: bold;
+			font-family: Arial;
+			font-weight: 700;
+			color: #636364;
+			border: 2px solid rgb(119, 119, 119);
+			width: 100px;
+			text-align: center;
+			background-color: white;
+			padding: 10px;
+			margin: 30px auto;
+
+			transition: all 0.2s ease-in;
+		}
+
+		.data:hover {
+		background-color: rgb(156, 159, 160);
+		cursor: pointer;
+		box-shadow: 1px 1px 5px rgb(196, 195, 195);	
+	}
+
+		.data-urfin {
+			font-size: 20px;
+			font-style: bold;
+			font-family: Arial;
+			font-weight: 700;
+			color: #636364;
+			border: 2px solid rgb(119, 119, 119);
+			width: 100px;
+			text-align: center;
+			background-color: white;
+			padding: 10px;
+
+			transition: all 0.2s ease-in;
+		}
+
+		.data-urfin:hover {
+		background-color: rgb(156, 159, 160);
+		cursor: pointer;
+		box-shadow: 1px 1px 5px rgb(196, 195, 195);	
+	}
+
+
+	
+
+
+		.nomer {
+			font-size: 20px;
+			font-style: bold;
+			font-family: Arial;
+			color: #616565;
+			font-weight: 700;
+			border: 2px solid rgb(124, 124, 124);
+			padding: 7px 7px;
+			width: 35px;
+			border-radius: 50%;
+			margin: 5px auto;
+			background-color: white;
+		}
+
+		
+
+		
+
+.body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300vh;
+	flex-direction: column;
+
+}
+
+.container {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    width: 700px;
+}
+
+.questions-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 колонки */
+    gap: 30px; /* расстояние между вопросами */
+}
+
+.question {
+    background-color: #f9f9f9;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+}
+
+.question .buttons {
+    display: flex; /* Кнопки располагать в строке */
+    gap: 10px; /* Добавить расстояние между кнопками */
+    margin-top: 10px; /* Немного отступим от текста */
+}
+
+button.answer-btn {
+    flex: 1; /* Кнопки занимают равную ширину */
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button.correct {
+    background-color: green;
+}
+
+button.incorrect {
+    background-color: red;
+}
+
+.none {
+	display: none;
+}
