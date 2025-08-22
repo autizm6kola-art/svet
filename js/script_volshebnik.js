@@ -141,7 +141,7 @@ app.appendChild(backToMenuBtnBottom);
 
 
 
-fetch("data/exercises.json")
+fetch("data/exercises_two.json")
   .then(res => res.json())
   .then(data => {
     exercises = data;
