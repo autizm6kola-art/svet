@@ -14,27 +14,6 @@ function saveAnswers() {
   localStorage.setItem("answers_ex2", JSON.stringify(savedAnswers));
 }
 
-// function renderMenu() {
-//   app.style.display = "none";
-//   menu.style.display = "block";
-//   menu.innerHTML = `<h2>Выберите страницу упражнений</h2><div id="pages"></div>`;
-
-//   const pagesContainer = document.getElementById("pages");
-//   const totalPages = Math.ceil(exercises.length / exercisesPerPage);
-
-//   for (let i = 1; i <= totalPages; i++) {
-//     const btn = document.createElement("button");
-//     const offset = 1030;
-//     btn.textContent = `${(i - 1) * exercisesPerPage + 1 + offset}–${i * exercisesPerPage + offset}`;
-//     btn.style.margin = "5px";
-//     btn.addEventListener("click", () => {
-//       currentPage = i;
-//       renderPage(currentPage);
-//     });
-//     pagesContainer.appendChild(btn);
-//   }
-// }
-
 function renderMenu() {
   app.style.display = "none";
   menu.style.display = "block";
@@ -43,50 +22,18 @@ function renderMenu() {
   const pagesContainer = document.getElementById("pages");
   const totalPages = Math.ceil(exercises.length / exercisesPerPage);
 
-  loadAnswers(); // загружаем сохранённые ответы перед рендером меню
-
   for (let i = 1; i <= totalPages; i++) {
-    const startIdx = (i - 1) * exercisesPerPage;
-    const pageExercises = exercises.slice(startIdx, startIdx + exercisesPerPage);
-    const totalOnPage = pageExercises.length;
-
-    let answeredCount = 0;
-    for (let ex of pageExercises) {
-      if (savedAnswers.hasOwnProperty(ex.id)) {
-        answeredCount++;
-      }
-    }
-
-    const percent = (answeredCount / totalOnPage) * 100;
-
-    // Создаём кнопку
     const btn = document.createElement("button");
     const offset = 1030;
     btn.textContent = `${(i - 1) * exercisesPerPage + 1 + offset}–${i * exercisesPerPage + offset}`;
     btn.style.margin = "5px";
-
-    // Назначаем цвет в зависимости от прогресса
-    if (percent === 0) {
-      btn.style.backgroundColor = "#cccccc8a"; // серый
-      btn.style.color = "#000";
-    } else if (percent < 100) {
-      btn.style.backgroundColor = "#f6f938ff"; // жёлтый
-      btn.style.color = "#000";
-    } else {
-      btn.style.backgroundColor = "#2ecc71"; // зелёный
-      btn.style.color = "#fff";
-    }
-
-    // Обработчик клика
     btn.addEventListener("click", () => {
       currentPage = i;
       renderPage(currentPage);
     });
-
     pagesContainer.appendChild(btn);
   }
 }
-
 
 function renderPage(pageNumber) {
   loadAnswers();
