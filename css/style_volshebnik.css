@@ -76,7 +76,7 @@ body {
 .option.wrong {
   background-color: var(--wrong);
   border-color: #e6a6a6;
-  color: #802828;
+  color: #ce5d5d;
 }
 
 .option.disabled {
